@@ -1562,7 +1562,7 @@ section {
   padding: 10px 12px;
 }
 
-.contact .php-email-form button[type="send"] {
+.contact .php-email-form button[type="submit"] {
   background: #f3aeba;
   border: 0;
   padding: 10px 24px;
@@ -1571,7 +1571,7 @@ section {
   border-radius: 4px;
 }
 
-.contact .php-email-form button[type="send"]:hover {
+.contact .php-email-form button[type="submit"]:hover {
   background: #ef98a8;
 }
 
@@ -1872,7 +1872,7 @@ section {
   width: calc(100% - 100px);
 }
 
-#footer .footer-top .footer-newsletter form input[type="send"] {
+#footer .footer-top .footer-newsletter form input[type="submit"] {
   position: absolute;
   top: 0;
   right: -1px;
@@ -1894,7 +1894,7 @@ section {
 
 
 
-#footer .footer-top .footer-newsletter form input[type="send"]:hover {
+#footer .footer-top .footer-newsletter form input[type="submit"]:hover {
   background: #5ab652;
 }
 
