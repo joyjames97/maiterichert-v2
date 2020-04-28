@@ -41,9 +41,9 @@
       <nav class="nav-menu d-none d-lg-block">
         <ul class="nav-inner">
           <li class="nav-logo"><a href="index.html"><img src="assets/img/dark-logo.png" alt="Maite Richert Logo" class="img-fluid logo-image"></a></li>
-          <li class="active"><a href="index.html">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="./index.html#about">About</a></li>
-          <li class="drop-down active"><a href="#">Services</a>
+          <li class="drop-down"><a href="#">Services</a>
             <ul>
               <li><a href="./personal-training.html">Personal  Training</a></li>
               <li><a href="./posing-lessons.html">Posing  Lessons</a></li>
@@ -66,7 +66,7 @@
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
-          <h2>Get Started Form</h2>
+          <h2>Get Started</h2>
           <ol>
             <li><a href="index.html">Home</a></li>
             <li>Get Started Form</li>
@@ -76,147 +76,214 @@
       </div>
     </section><!-- End Breadcrumbs -->
 
-    <!-- ======= Form Details Section ======= -->
-    <section id="form-details" class="form-details" data-aos="fade-up" data-aos-delay="100">
-      <div class="container">
-
-        <div class="form-description">
-          <h2>Let's do this</h2>
-          <p>
-            Let me know a little about you so we can get started
-          </p>
+    <!-- Multi step form -->
+<section class="multi_step_form">
+  <form id="msform" class="container col-sm-6">
+    <!-- Tittle -->
+    <div class="tittle">
+      <h2>Nice to meet you!</h2>
+      <p class="form-paragraph">I use this info to get to know you better.<br>No marketing, promise.</p>
+    </div>
+    <!-- progressbar -->
+    <div class="progressbar-container">
+      <ul id="progressbar">
+        <li class="active">About You</li>
+        <li>Your Training</li>
+        <li>Your Nutrition</li>
+      </ul>
+    </div>
+    <!-- fieldsets -->
+    <fieldset>
+      <h3>About You</h3>
+        <div class="form-group">
+          <input type="text" id="name" class="form-control" required />
+          <label for="name">Full Name</label>
         </div>
-
-        <div class="row">
-          <div class="col-md-6 col-md-offset-3">
-            <form id="msform" action="forms/getstarted.php" method="post" role="form" class="php-email-form" data-aos="fade-left">
-              <ul id="progressbar">
-                <li class="pbactive">Personal Details</li>
-                <li>Habits</li>
-                <li>Habits</li>
-                <li>Latest Meals</li>
-              </ul>
-              <fieldset>
-                <h3 class="fs-title">Personal Details</h3>
-                <h4 class="fs-subtitle">Tell me a bit about yourself</h4>
-                <div class="form-group">
-                  <p>Your full name</p>
-                  <input type="text" name="flname" placeholder="First &amp; Last Name" />
-                </div>
-                <div class="form-group">
-                  <p>Your email</p>
-                  <input type="email" name="email" placeholder="Your Email" />
-                </div>
-                <div class="form-group">
-                  <p>Your age</p>
-                  <input type="number" name="age" placeholder="Your Age" min="15" max="80"  />
-                </div>
-                <div class="form-group">
-                  <p>Your weight</p>
-                  <input type="text" name="weight" placeholder="Your Weight (Kg)" />
-                </div>
-                <div class="form-group">
-                  <p>Your height</p>
-                  <input type="text" name="height" placeholder="Your Height (CM)" />
-                </div>
-                <div class="form-group">
-                  <p>Your job role</p>
-                  <input type="text" name="job" placeholder="Your Job Role" />
-                </div>
-              </fieldset>
-              <fieldset>
-                <h3 class="fs-title">Habits</h3>
-                <h4 class="fs-subtitle">Tell me a bit about your activity</h4>
-                <div class="form-group">
-                  <p>What is your primary goal?</p>
-                  <input type="text" name="goal" placeholder="Lose weight, bulk up, more strength, etc.." />
-                </div>
-                <div class="form-group">
-                  <p>What did you try to reach this goal?</p>
-                  <input type="text" name="method-tried" placeholder="Diets, exercises, etc.." />
-                </div>
-                <div class="form-group">
-                  <p>How far did you come with these methods?</p>
-                  <input type="text" name="method-result" placeholder="I lost weight, I gained more strenght, etc.." />
-                </div>
-                <div class="form-group">
-                  <p>What was your nutrition and workout plan at the time?</p>
-                  <input type="text" name="past-plan" placeholder="Keto diet, bulk up workout, etc.." />
-                </div>
-                <div class="form-group">
-                  <p>What was your bodyshape goal?</p>
-                  <input type="text" name="bodyshape-goal" placeholder="Reduce belly fat, have bigger gluteos, etc.." />
-                </div>
-                <div class="form-group">
-                  <p>Did you had any type of sport activity before?</p>
-                  <input type="text" name="past-activity" placeholder="Any sports or training you have done" />
-                </div>
-                <div class="form-group">
-                  <p>Do you train at the moment? How often and how long?</p>
-                  <input type="text" name="current-training" placeholder="How many days and for how long" />
-                </div>
-                <div class="form-group">
-                  <p>How active are you in your free time?</p>
-                  <input type="text" name="active-freetime" placeholder="Mainly sitting, mainly standing, mostly moving, etc.." />
-                </div>
-                <div class="form-group">
-                  <p>Do you have a dog?</p>
-                  <input type="text" name="dog" placeholder="Yes or no" />
-                </div>
-                <div class="form-group">
-                  <p>Do you often have cravings for "Junk Food"?</p>
-                  <input type="text" name="junk-food" placeholder="A few times a week, each day, none, etc.." />
-                </div>
-              </fieldset>
-              <fieldset>
-                <h3 class="fs-title">Habits</h3>
-                <h4 class="fs-subtitle">Tell me a bit about your eating habits</h4>
-                <div class="form-group">
-                  <p>Can you commit easily to a strict diet or do you prefer flexible?</p>
-                  <input type="text" name="strict-diet" placeholder="Yes, no, prefer flexible, etc.." />
-                </div>
-                <div class="form-group">
-                  <p>Have you ever tracked what your diet in an app?</p>
-                  <input type="text" name="tracked-diet" placeholder="Yes or no" />
-                </div>
-                <div class="form-group">
-                  <p>Are you in a special diet?</p>
-                  <input type="text" name="special-diet" placeholder="Vegan, vegetarian, keto, etc.." />
-                </div>
-                <div class="form-group">
-                  <p>Are you familiar with meal prep?</p>
-                  <input type="text" name="meal-prep" placeholder="Yes or no" />
-                </div>
-                <div class="form-group">
-                  <p>Do you have any food allergies or intolerances?</p>
-                  <input type="text" name="food-allergies" placeholder="Peanuts, lactose, fructose, etc.." />
-                </div>
-                <div class="form-group">
-                  <p>Have you had any eating disorders in the past?</p>
-                  <input type="text" name="eating-disorder" placeholder="Yes or no" />
-                </div>
-                <div class="form-group">
-                  <p>Do you any disabilities or difficulties to do exercise?</p>
-                  <input type="text" name="disabilities" placeholder="If you have, please share more info" />
-                </div>
-                <div class="form-group">
-                  <p>Do you have any medical conditions?</p>
-                  <input type="text" name="medical-conditions" placeholder="If you have, please share more info" />
-                </div>
-                <div class="form-group">
-                  <p>Are you currently taking any medication or under a medical treatment?</p>
-                  <input type="text" name="medication" placeholder="If you are, please share more info" />
-                </div>
-              </fieldset>
-              <fieldset>
-                <h3 class="fs-title">Nutrition</h3>
-                <h4 class="fs-subtitle">Tell me about your latest meals</h4>
-              </fieldset>
-            </form>
+        <div class="form-group">
+          <input type="email" id="email" class="form-control" required />
+          <label for="email">Email</label>
+        </div>
+        <div class="form-group">
+          <input type="text" id="address" class="form-control" required />
+          <label for="address">Address</label>
+        </div>
+        <div class="form-group">
+          <input type="text" id="job" class="form-control" required />
+          <label for="job">What do you do for a living?</label>
+        </div>
+        <div class="form-group">
+          <input type="text" id="height" class="form-control" required />
+          <label for="height">Height (cm)</label>
+        </div>
+        <div class="form-group">
+          <input type="text" id="weight" class="form-control" required />
+          <label for="weight">Weight (kg)</label>
+        </div>
+        <div class="form-group radio-group">
+          Do you have any medical conditions?
+          <label for="chkYes1">
+            <input type="radio" id="chkYes1" name="chk1" value="yes" onclick="ShowHideDiv(1)" required="true" /><span>Yes</span>
+          </label>
+          <label for="chkNo1">
+            <input type="radio" id="chkNo1" name="chk1" value="no" onclick="ShowHideDiv(1)" checked /><span>No</span>
+          </label>
+          <div id="dvtext1" style="display: none">
+            <input type="text" id="txtBox1" name="txtbox1" class="form-control" />
+            <label for="txtBox1" class="txtbox-label">Please describe your condition</label>
           </div>
         </div>
+      <button type="button" class="action-button previous_button">Back</button>
+      <button type="button" class="next action-button">Continue</button>
+    </fieldset>
+    <fieldset>
+      <h3>Your training</h3>
+      <h6>Tell me more about your level of activity.</h6>
+      <div class="form-group">
+        <input type="text" id="goal" class="form-control" required />
+        <label for="goal">What's your primary goal?</label>
       </div>
-    </section><!-- End form Details Section -->
+      <div class="form-group radio-group">
+        Did you tried to reach this goal before?
+        <label for="chkYes2">
+          <input type="radio" id="chkYes2" name="chk2" value="yes" onclick="ShowHideDiv(2)" required="true" />Yes
+        </label>
+        <label for="chkNo2">
+          <input type="radio" id="chkNo2" name="chk2" value="no" onclick="ShowHideDiv(2)" checked />No
+        </label>
+        <div id="dvtext2" style="display: none">
+          <input type="text" id="txtBox2" name="txtbox2" class="form-control" />
+          <label for="txtBox2" class="txtbox-label">What training or nutrition plan have you tried?</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <input type="text" id="bodyshape" class="form-control" required>
+        <label for="bodyshape">What's your bodyshape goal?</label>
+      </div>
+      <div class="form-group">
+        <input type="text" id="lowestWeight" class="form-control" required />
+        <label for="lowestWeight">What's your lowest weight recently? (kg)</label>
+      </div>
+      <div class="form-group">
+        <input type="text" id="sleepHours" class="form-control" required />
+        <label for="sleepHours">How much sleep do you get per day?</label>
+      </div>
+      <div class="form-group radio-group">
+        Do you currently do any type of training or sport activity?
+        <label for="chkYes3">
+          <input type="radio" id="chkYes3" name="chk3" onclick="ShowHideDiv(3)" required="true" />Yes
+        </label>
+        <label for="chkNo3">
+          <input type="radio" id="chkNo3" name="chk3" onclick="ShowHideDiv(3)" checked />No
+        </label>
+        <div id="dvtext3" style="display: none">
+          <input type="text" id="txtBox3" name="txtbox3" class="form-control" />
+          <label for="txtBox3" class="txtbox-label">What activity do you do and how often?</label>
+        </div>
+      </div>
+      <div class="form-group radio-group">
+        Do you have a dog?
+        <label for="dogYes">
+          <input type="radio" id="dogYes" name="dog" required="true" />Yes
+        </label>
+        <label for="dogNo">
+          <input type="radio" id="dogNo" name="dog" checked />No
+        </label>
+      </div>
+      <div class="form-group radio-group">
+        Have you suffered any kind of injury in the past?
+        <label for="chkYes4">
+          <input type="radio" id="chkYes4" name="chk4" onclick="ShowHideDiv(4)" required="true" />Yes
+        </label>
+        <label for="chkNo4">
+          <input type="radio" id="chkNo4" name="chk4" onclick="ShowHideDiv(4)" checked />No
+        </label>
+        <div id="dvtext4" style="display: none">
+          <input type="text" id="txtBox4" name="txtbox4" class="form-control" />
+          <label for="txtBox4" class="txtbox-label">What injury have you had?</label>
+        </div>
+      </div>
+      <button type="button" class="action-button previous previous_button">Back</button>
+      <button type="button" class="next action-button">Continue</button>
+    </fieldset>
+    <fieldset>
+      <h3>Your nutrition</h3>
+      <h6>Tell me more about your eating habits.</h6>
+      <div class="form-group">
+        <input type="text" id="cravingsJunkFood" class="form-control" required />
+        <label for="cravingsJunkFood">How often do you have food cravings?</label>
+      </div>
+      <div class="form-group radio-group">
+        Have you tracked your calories with an app?
+        <label for="trackedCalYes">
+          <input type="radio" id="trackedCalYes" name="trackedCal" required="true" />Yes
+        </label>
+        <label for="trackedCalNo">
+          <input type="radio" id="trackedCalNo" name="trackedCal" checked />No
+        </label>
+      </div>
+      <div class="form-group radio-group">
+        Can you commit toa a strict meal plan or do you prefer to be flexible?
+        <label for="dietPlanPrefStrict">
+          <input type="radio" id="dietPlanPrefStrict" name="dietPlanPref" required="true" />Strict Meal Plan
+        </label>
+        <label for="dietPlanPrefFlex">
+          <input type="radio" id="dietPlanPrefFlex" name="dietPlanPref" checked />Flexible Meal Plan
+        </label>
+      </div>
+      <div class="form-group radio-group">
+        Are you familiar with meal prep?
+        <label for="familiarMealPrepYes">
+          <input type="radio" id="familiarMealPrepYes" name="familiarMealPrep" required="true" />Yes
+        </label>
+        <label for="familiarMealPrepNo">
+          <input type="radio" id="familiarMealPrepNo" name="familiarMealPrep" checked />No
+        </label>
+      </div>
+      <div class="form-group radio-group">
+        Do you follow any kind of special diet?
+        <label for="chkYes5">
+          <input type="radio" id="chkYes5" name="chk5" onclick="ShowHideDiv(5)" required="true" />Yes
+        </label>
+        <label for="chkNo5">
+          <input type="radio" id="chkNo5" name="chk5" onclick="ShowHideDiv(5)" checked />No
+        </label>
+        <div id="dvtext5" style="display: none">
+          <input type="text" id="txtBox5" name="txtbox5" class="form-control" />
+          <label for="txtBox5" class="txtbox-label">Please indicate which diet:</label>
+        </div>
+      </div>
+      <div class="form-group radio-group">
+        Do you have any food allergies/intolerances?
+        <label for="chkYes6">
+          <input type="radio" id="chkYes6" name="chk6" onclick="ShowHideDiv(6)" required="true" />Yes
+        </label>
+        <label for="chkNo6">
+          <input type="radio" id="chkNo6" name="chk6" onclick="ShowHideDiv(6)" checked />No
+        </label>
+        <div id="dvtext6" style="display: none">
+          <input type="text" id="txtBox6" name="txtbox6" class="form-control" />
+          <label for="txtBox6" class="txtbox-label">Please indicate what allergy / intolerance:</label>
+        </div>
+      </div>
+      <div class="form-group radio-group">
+        Have you suffered from an eating disorder?
+        <label for="chkYes7">
+          <input type="radio" id="chkYes7" name="chk7" onclick="ShowHideDiv(7)" required="true" />Yes
+        </label>
+        <label for="chkNo7">
+          <input type="radio" id="chkNo7" name="chk7" onclick="ShowHideDiv(7)" checked />No
+        </label>
+        <div id="dvtext7" style="display: none">
+          <input type="text" id="txtBox7" name="txtbox7" class="form-control" />
+          <label for="txtBox7" class="txtbox-label">Please indicate which one you have had:</label>
+        </div>
+      </div>
+      <button type="button" class="action-button previous previous_button">Back</button>
+      <a href="#" class="action-button">Finish</a>
+    </fieldset>
+  </form>
+</section>
+<!-- End Multi step form -->
 
   </main><!-- End #main -->
 

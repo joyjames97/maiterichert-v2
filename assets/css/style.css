@@ -1625,7 +1625,7 @@ section {
 # Breadcrumbs
 --------------------------------------------------------------*/
 .breadcrumbs {
-  padding: 40px 0;
+  padding: 20px 0;
 }
 
 .breadcrumbs h2 {
@@ -1775,54 +1775,170 @@ section {
 /*--------------------------------------------------------------
 # Get Started Form
 ---------------------------------------------------------------*/
-.form-details {
-  padding-top: 0;
+.multi_step_form {
+  margin: 0;
+  background-color: #f9f9f9;
 }
 
-.form-details .form-details-container {
+#msform {
+	margin: 50px auto;
+	text-align: center;
+	position: relative;
+  background-color: #fff;
+}
+
+.multi_step_form #msform {
+  text-align: center;
+  margin: 0 auto;
+  background: #ffffff;
+  z-index: 1;
+}
+
+.multi_step_form #msform .tittle h2 {
+  font-size: 2rem;
+  padding: 2rem 0 1rem 0;
+  text-align: center;
+}
+
+.form-paragraph {
+  text-align: center;
+  padding: 0 10px 10px 10px;
+
+}
+
+#msform fieldset {
+  background: white;
+	border: 0 none;
+	border-radius: 3px;
+	padding: 20px 0;
+	box-sizing: border-box;
+	margin: 0 16%;
   position: relative;
 }
 
+#msform fieldset:not(:first-of-type) {
+	display: none;
+}
 
-.form-details .form-info {
-  padding: 30px;
+#progressbar {
+	margin-bottom: 30px;
+	overflow: hidden;
+	counter-reset: step;
+  margin: 0 auto;
+}
+
+#progressbar li {
+	list-style-type: none;
+	text-transform: uppercase;
+	font-size: 12px;
+	width: 31%;
+	float: left;
+	position: relative;
+  text-align: center;
+}
+
+#progressbar li:before {
+	content: counter(step);
+	counter-increment: step;
+	width: fit-content;
+	display: block;
+  color: #626262;
+	font-size: 15px;
+	background: #dcdcdc;
+	border-radius: 50%;
+	margin: 0 auto 5px auto;
+  padding: 10px 16px;
+}
+
+#progressbar li:after {
+	content: '';
+	width: 100%;
+	height: 5px;
+	background: #dcdcdc;
+	position: absolute;
+	left: -50%;
+	top: 19px;
+	z-index: -1; /*put it behind the numbers*/
+}
+
+#progressbar li.active:before,  #progressbar li.active:after{
+	background: #8ccfee;
+	color: #fff;
+}
+
+#progressbar li:first-child:after {
+	content: none;
+}
+
+.multi_step_form .form-group input[type="text"], .multi_step_form .form-group input[type="email"] {
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: none;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #999;
+}
+
+.form-group {
+  margin: 35px 0 !important;
+}
+
+.multi_step_form form div {
+  position: relative;
+  text-align: left;
+  color: #999;
+}
+
+.multi_step_form form div label {
   position: absolute;
-  right: 0;
-  bottom: -70px;
-  background: #fff;
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-  z-index: 2;
+  top: 10px;
+  pointer-events: none;
+  left: 0;
+  color: #999;
+  transition: .5s;
 }
 
-.form-details .form-info h3 {
-  font-size: 22px;
-  font-weight: 400;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #eee;
+.multi_step_form .radio-group label {
+  position: relative;
+  pointer-events: auto;
 }
 
-.form-details .form-description {
-  padding-top: 50px;
+.radio-group div {
+  position: relative;
 }
 
-.form-details .form-description h2 {
-  font-size: 26px;
-  font-weight: 400;
-  margin-bottom: 20px;
-  text-align: center;
+.txtbox-label {
+  position: absolute;
+  top: 10px !important;
+  pointer-events: none;
+  left: 0;
+  color: #999;
+  transition: .5s;
 }
 
-.form-details .form-description p {
-  padding: 20px 0;
-  text-align: center;
+.radio-group {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
 }
 
-@media (max-width: 768px) {
-  .form-details .form-info {
-    position: static;
-    margin-top: 30px;
-  }
+.multi_step_form .form-group input[type="text"]:focus ~ label,
+.multi_step_form .form-group input[type="email"]:focus ~ label,
+.multi_step_form .form-group input[type="text"]:valid ~ label,
+.multi_step_form .form-group input[type="email"]:valid ~ label {
+  top: -15px;
+  left: 0;
+  color: #60bce7;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.multi_step_form .form-group input[type="text"]:focus,
+.multi_step_form .form-group input[type="email"]:focus,
+.multi_step_form .form-group input[type="text"]:valid,
+.multi_step_form .form-group input[type="email"]:valid {
+  border-bottom: 2px solid #60bce7;
 }
 
 /*--------------------------------------------------------------
