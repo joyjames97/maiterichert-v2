@@ -1775,6 +1775,7 @@ section {
 /*--------------------------------------------------------------
 # Get Started Form
 ---------------------------------------------------------------*/
+
 .multi_step_form {
   margin: 0;
   background-color: #f9f9f9;
@@ -1795,8 +1796,8 @@ section {
 }
 
 .multi_step_form #msform .tittle h2 {
-  font-size: 2rem;
-  padding: 2rem 0 1rem 0;
+  font-size: 30px;
+  padding: 25px 0;
   text-align: center;
 }
 
@@ -1812,8 +1813,27 @@ section {
 	border-radius: 3px;
 	padding: 20px 0;
 	box-sizing: border-box;
-	margin: 0 16%;
+	margin: 0 50px;
   position: relative;
+}
+
+.fieldset-box {
+  width: 40%;
+  display: inline-block;
+  margin: 30px;
+
+}
+
+@media only screen and (max-width: 768px) {
+  .fieldset-box {
+    width: 100%;
+    display: block;
+    margin: 0;
+  }
+
+  .long-label {
+    top: -15px !important;
+  }
 }
 
 #msform fieldset:not(:first-of-type) {
@@ -1831,10 +1851,11 @@ section {
 	list-style-type: none;
 	text-transform: uppercase;
 	font-size: 12px;
-	width: 31%;
+	width: 25%;
 	float: left;
 	position: relative;
   text-align: center;
+  left: -15px;
 }
 
 #progressbar li:before {
@@ -1903,8 +1924,49 @@ section {
   pointer-events: auto;
 }
 
+.multi_step_form .radio-group label span {
+  padding-left: 5px;
+  margin: 0 10px;
+}
+
 .radio-group div {
   position: relative;
+}
+
+.previous_button {
+  padding: 10px 0;
+  width: 150px;
+  background-color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  color: #8ccfee;
+  border: 2px solid #8ccfee;
+  border-radius: 5px;
+  margin: 10px;
+  transition: 0.5s;
+}
+
+.previous_button:hover {
+  background: #8ccfee;
+  color: #fff;
+}
+
+.next {
+  padding: 10px 0;
+  width: 150px;
+  background-color: #8ccfee;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  border: 2px solid #8ccfee;
+  border-radius: 5px;
+  margin: 0 10px;
+  transition: 0.5s;
+}
+
+.next:hover {
+  background-color: #48b2e4;
+  border-color: #48b2e4;
 }
 
 .txtbox-label {
