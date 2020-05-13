@@ -119,16 +119,16 @@
 
   // Porfolio isotope and filter
   $(window).on('load', function() {
-    var portfolioIsotope = $('.portfolio-container').isotope({
-      itemSelector: '.portfolio-item',
+    var shopIsotope = $('.shop-container').isotope({
+      itemSelector: '.shop-item',
       layoutMode: 'fitRows'
     });
 
-    $('#portfolio-flters li').on('click', function() {
-      $("#portfolio-flters li").removeClass('filter-active');
+    $('#shop-flters li').on('click', function() {
+      $("#shop-flters li").removeClass('filter-active');
       $(this).addClass('filter-active');
 
-      portfolioIsotope.isotope({
+      shopIsotope.isotope({
         filter: $(this).data('filter')
       });
     });
